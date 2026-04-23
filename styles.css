@@ -1,0 +1,70 @@
+/* Reseting default browser spacing */
+*,
+ *::before, 
+ *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* variables */
+:root {
+  --palette-1: #ddbeaf; /* Muddy Rose */
+  --palette-2: #CFCEB8; /* Tropical Fog */
+  --palette-3: #C3DDE5; /* Breezy */
+  --palette-4: #F3F0E9; /* Cotton Field */
+  --palette-5: #B7C7D6; /* Plein Air */
+
+  --text-strong: #24313a;
+  --text-base: #3d4b53;
+  --text-soft: #66737b;
+  --text-subtle: #7f8b91;
+  --text-on-light: #1f2a30;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+}
+
+body {
+  background: var(--palette-4);
+  color: var(--text-on-light);
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  padding: var(--space-3) var(--space-7);
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  position: relative;
+
+  box-shadow: 0 1px 5px rgba(0,0,0,0.85);
+}
+
+.nav-links ul {
+  display: flex;
+  gap: var(--space-3);
+  
+  font-weight: 600;
+  font-size: var(--space-4);
+  list-style: none;
+}
+
+.navlink a {
+  text-decoration: none;
+  color: var(--text-on-light);
+}
+
+.nav-btns {
+  margin-left: auto; /* to separate the buttons away from the page links */
+  display: flex;
+  gap: var(--space-3);
+}
