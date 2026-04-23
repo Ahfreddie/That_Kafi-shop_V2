@@ -14,6 +14,7 @@
   --palette-3: #C3DDE5; /* Breezy */
   --palette-4: #F3F0E9; /* Cotton Field */
   --palette-5: #B7C7D6; /* Plein Air */
+  --palette-5_2: #77acde;
 
   --text-strong: #24313a;
   --text-base: #3d4b53;
@@ -29,30 +30,39 @@
   --space-6: 2rem;
   --space-7: 3rem;
   --space-8: 4rem;
+
+  --bradius-1: 25px;
+  --border-1: 2px solid var(--text-strong);
+  --border-2: 2px solid var(--palette-3);
+  --border-3: 2px solid var(--palette-5);
+  --border-3: 2px solid var(--palette-1);
+
+  --text-1: 1.2rem;
 }
 
 body {
   background: var(--palette-4);
   color: var(--text-on-light);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar styling */
 .navbar {
   width: 100%;
-  padding: var(--space-3) var(--space-7);
+  padding: var(--space-4) var(--space-7);
 
   display: flex;
   align-items: center;
   gap: var(--space-5);
   position: relative;
 
-  box-shadow: 0 1px 5px rgba(0,0,0,0.85);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.45);
 }
 
 .nav-links ul {
   display: flex;
-  gap: var(--space-3);
-  
+  gap: var(--space-4);
+
   font-weight: 600;
   font-size: var(--space-4);
   list-style: none;
@@ -61,10 +71,99 @@ body {
 .navlink a {
   text-decoration: none;
   color: var(--text-on-light);
+  transition: color 0.3s ease;
+}
+
+.navlink a:hover {
+  color: var(--palette-5_2);
 }
 
 .nav-btns {
   margin-left: auto; /* to separate the buttons away from the page links */
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-4);
+}
+
+.btn {
+  font-size: var(--space-4);
+  padding: var(--space-1)  var(--space-4);
+  border-radius: var(--bradius-1); 
+  cursor: pointer;
+  position: relative;
+}
+
+.sign-in {
+  border: var(--border-1);
+  background-color: var(--palette-4);
+  
+}
+
+.join {
+  border: var(--border-1);
+  background-color: var(--text-on-light);
+  color: var(--palette-4);
+  transition: background-color 0.3s ease-in, color 0.3s ease;
+}
+
+.join:hover {
+  background-color: var(--palette-5);
+  color: var(--text-on-light);
+}
+
+/* subtle line animation for hover on CTA buttons in hover */
+.join::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  bottom: -0.75rem;
+  width: 85%;
+  height: 2px;
+  background-color: var(--palette-1);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.join:hover:after {
+  transform: scaleX(1);
+}
+
+.sign-in::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  bottom: -0.75rem;
+  width: 85%;
+  height: 2px;
+  background-color: var(--palette-5);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.sign-in:hover:after {
+  transform: scaleX(1);
+}
+
+/* section general styling */
+section {
+  margin: 0 8% 3rem 8%;
+}
+
+/* banner */
+.banner {
+  background-color: var(--palette-5);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+
+  padding: var(--space-6);
+
+  font-size: var(--space-3);
 }
