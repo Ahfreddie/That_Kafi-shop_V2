@@ -193,13 +193,14 @@ section {
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
 
-  background-color: var(--palette-1);
+  background-color: #f2e9e4; /* offwhite to match  hero the img  */
 }
 
 .hero-img {
   height: 100%;
   overflow: hidden;
   border-radius: 15px 0 0 15px;
+  
 }
 
 .hero-img img {
@@ -229,6 +230,10 @@ section {
 .hero-cta {
   width: fit-content;
   align-self: center;
-  background-color: var(--palette-1);
+  background-color: #f2e9e4; /* offwhite to match  hero the img  */
   border: 1px solid var(--text-base);
+  transition: background-color 0.3s ease;
 }
+ .hero-cta:hover {
+  background-color: #ddd5d0;
+ }
