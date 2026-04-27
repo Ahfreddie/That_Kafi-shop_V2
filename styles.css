@@ -227,6 +227,10 @@ section {
   padding: 0 var(--space-6);
 }
 
+.hero-p {
+  padding: 0 var(--space-7);
+}
+
 .hero-cta {
   width: fit-content;
   align-self: center;
@@ -236,4 +240,25 @@ section {
 }
  .hero-cta:hover {
   background-color: #ddd5d0;
+ }
+
+
+ /* testing for responsiveness, not final */
+ @media (max-width: 920px) {
+  section {
+    margin: 0 0 2rem 0;
+    border-radius: 0;
+  }
+
+  .banner {
+    border-radius: 0;
+  }
+
+  .hero-img {
+    border-radius: 0;
+  }
+
+  .hero-p {
+  padding: 0 ;
+}
  }
