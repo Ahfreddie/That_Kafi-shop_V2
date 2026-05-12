@@ -267,14 +267,14 @@ img:not(.icon) {
 
  /* specials sections */
  .specials-1 {
-  background-color: var(--palette-5);
+  background-color: var(--palette-2);
   flex-direction: row-reverse;
  }
  
 
 
  /* testing for responsiveness, not final */
- @media (max-width: 1240px) {
+ @media (max-width: 1024px) {
   section {
     margin: 0 0 2rem 0;
     border-radius: 0;
@@ -295,4 +295,12 @@ img:not(.icon) {
   .hero-p {
   padding: 0 ;
 }
+ }
+
+ @media (max-width: 640px) {
+  section, .specials-1 {
+    margin: 0 0 2rem 0;
+    border-radius: 0;
+    flex-direction: column;
+  }
  }
