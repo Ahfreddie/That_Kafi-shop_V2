@@ -202,7 +202,7 @@ section:not(.banner):not(.hero-section) {
 .hero-section {
   height: 65vh;
 
-  background-color: #f2e9e4; /* offwhite to match  hero the img  */
+  background-color: var(--color-breezy); /* offwhite to match  hero the img  */
 }
 
 img:not(.icon) {
@@ -251,7 +251,7 @@ img:not(.icon) {
 }
 
 .hero-cta {
-  background-color: #f2e9e4; /* offwhite to match  hero the img  */
+  background-color: var(--border-breezy); /* offwhite to match  hero the img  */
   border: 1px solid var(--text-base);
   transition: background-color 0.3s ease;
 }
@@ -262,12 +262,12 @@ img:not(.icon) {
 }
 
  .hero-cta:hover {
-  background-color: #ddd5d0;
+  background-color: var(--color-link-hover);
  }
 
  /* specials sections */
  .specials-1 {
-  background-color: var(--color-tropical-fog);
+  background-color: var(--color-breezy);
   flex-direction: row-reverse;
  }
  
